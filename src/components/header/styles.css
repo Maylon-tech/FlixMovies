@@ -17,6 +17,14 @@ header {
    font-weight: bold;
 }
 
+.about {
+   margin-left: 2rem;
+   color: #fff;
+   font-size: 1.3rem;
+   font-weight: 600;
+   text-decoration: none;
+}
+
 .favoritos {
    cursor: pointer;
    text-decoration: none;

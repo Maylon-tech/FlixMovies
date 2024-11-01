@@ -31,21 +31,31 @@ function Favoritos() {
             filmes.length === 0 && (
                <div className="sem-filmes">
                   <h3>Nenhum filme salvo.</h3>
-                  <Link to="/">Veja todos filmes.</Link>
+                  <Link className='redirect-link' to="/">Veja todos filmes.</Link>
                </div>
             )
          }
 
-         <ul>
+         <ul className='box-container'>
             {
                filmes.map((item) => {
                   return (
-                     <li key={item.id}>
+                     <li className='list-content-favorite' key={item.id}>
                         <span>{item.title}</span>
-                        <div className="">
-                           <Link to={`/filmes/${item.id}`}>Ver Detalhes</Link>
+                        <div className="button-content">
+                           <Link 
+                              className='details'
+                              to={`/filmes/${item.id}`}
+                           >
+                              Ver Detalhes
+                           </Link>
 
-                           <button onClick={() => excluirFilme(item.id)}>Excluir</button>
+                           <button 
+                              onClick={() => excluirFilme(item.id)}
+                              className='delete-btn'
+                           >
+                                 Excluir
+                              </button>
                         </div>
                      </li>
                   )

@@ -38,13 +38,16 @@ const Home = () => {
                filmes.map((filme) => {
                   return (
                      <article className="" key={filme.id}>
-                        <strong>{filme.title}</strong>
-
-                        <img 
-                           src={`https://image.tmdb.org/t/p/original/${filme.poster_path}`} 
-                           alt={filme.title} 
-                        />
-                        <Link to={`/filme/${filme.id}`}>Acessar</Link>
+                        <Link to={`/filmes/${filme.id}`}>
+                           <img 
+                              src={`https://image.tmdb.org/t/p/original/${filme.poster_path}`} 
+                              alt={filme.title} 
+                           />
+                        </Link>
+                        <div className="movie-info">
+                           <strong>{filme.title}</strong>
+                           <Link to="/favoritos">Meu Favoritos</Link>
+                        </div>
                      </article>
                   )
                })

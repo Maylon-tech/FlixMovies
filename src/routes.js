@@ -5,7 +5,7 @@ import Filme from "./pages/filme"
 import { Header } from "./components/header"
 import Error from "./pages/Error"
 import Favoritos from "./pages/Favoritos"
-
+import About from "./pages/about"
 
 const  RoutesApp = () => {
    return (
@@ -13,10 +13,10 @@ const  RoutesApp = () => {
          <Header />
          <Routes>
             <Route path="/" element={ <Home />} />
-            <Route path="/filme/:id" element={ <Filme />} />
+            <Route path="/filmes/:id" element={ <Filme />} />
             <Route path="/favoritos" element={ <Favoritos /> } />
-
             <Route path="*" element={ <Error/> } />
+            <Route path="/about" element={ <About />} />
          </Routes>
       </BrowserRouter>
    )

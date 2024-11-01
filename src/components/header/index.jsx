@@ -4,12 +4,21 @@ import './styles.css'
 export function Header() {
    return (
       <header>
-         <Link 
-            to="/"
-            className='logo'
-         >
-            Prime Flix
-         </Link>
+         <nav>
+            <Link 
+               to="/"
+               className='logo'
+            >
+               Prime Flix
+            </Link>
+
+            <Link 
+               to="/about"
+               className='about'
+            >
+               Sobre
+            </Link>
+         </nav>
 
          <Link 
             to="/favoritos" 

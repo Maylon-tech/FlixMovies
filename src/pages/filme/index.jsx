@@ -10,7 +10,6 @@ const Filme = () => {
    const [filme, setFilme] = useState({})
    const [loading, setLoading] = useState(true)
 
-   
    useEffect(() => {
       async function loadFilme() {
          await api.get(`/movie/${id}`, {
@@ -80,7 +79,6 @@ const Filme = () => {
 
             <button
                onClick={() => salvarFilme()}
-            
             >
                Salvar
             </button>
